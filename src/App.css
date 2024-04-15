@@ -1,0 +1,16 @@
+.framebox{
+    background-color: #130d1e;
+
+
+}
+.topbox{
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px 30px 10px;
+}
+
+.video{
+    width: 60%;
+    height: 500px;
+    background-color: aliceblue;
+}
