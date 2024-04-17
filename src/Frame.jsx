@@ -12,6 +12,7 @@ export const Frame = () => {
   return (
     <div className='framebox'>
       <div className="topbox">
+        <img src="codelogo.png" alt="" />
       <div className="video">
       <iframe width="871" height="500" src={finalurl} title="APIs Explained (in 4 Minutes)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
