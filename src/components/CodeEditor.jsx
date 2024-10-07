@@ -6,9 +6,14 @@ import { CODE_SNIPPETS } from "../constants";
 import Output from "./Output";
 
 const CodeEditor = () => {
+
+  console.log("Windo Location:" , window.location);
+  const key = window.location.search;
+  const urlParam = new URLSearchParams(key);
+  const lang =urlParam.get('lang');
   const editorRef = useRef();
   const [value, setValue] = useState("");
-  const [language, setLanguage] = useState("javascript");
+  const [language, setLanguage] = useState(lang);
 
   const onMount = (editor) => {
     editorRef.current = editor;
