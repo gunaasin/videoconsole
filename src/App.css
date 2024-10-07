@@ -15,11 +15,11 @@
     background-color: aliceblue;
 }
 
-/* .video-box{
+.video-box{
     width: 671px;
     height: 500px;
-   width="871" height="500" */
-
+    /* width="871"
+}
 .topbox img{
     position: absolute;
     top: 80px;

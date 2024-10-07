@@ -68,7 +68,7 @@ export const Frame = () => {
       <div className="topbox">
         <img src="codelogo.png" alt="" />
       <div className="video">
-      <iframe className="video-box" src={decryptedData} title="Game Based learning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe className="video-box"  src={decryptedData} title="Game Based learning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
      
