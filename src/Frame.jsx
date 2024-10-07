@@ -66,7 +66,7 @@ export const Frame = () => {
   return (
     <div className='framebox'>
       <div className="topbox">
-        <img src="codelogo.png" alt="" />
+       <a href="https://learncode-seven.vercel.app/"><img src="codelogo.png" alt="" /></a> 
       <div className="video">
       <iframe className="video-box"  src={decryptedData} title="Game Based learning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
