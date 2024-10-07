@@ -45,7 +45,7 @@ export const Frame = () => {
     const decryptData = async () => {
       const password = "guna-techy@codingGame"; 
       const queryParams = new URLSearchParams(window.location.search);
-      const encryptedBase64 = queryParams.get("url");
+      const encryptedBase64 = queryParams.get("game");
       const ivBase64 = queryParams.get("iv");
 
       if (encryptedBase64 && ivBase64) {
