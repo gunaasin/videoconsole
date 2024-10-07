@@ -5,17 +5,11 @@ import CodeEditor from "./components/CodeEditor";
 export const Frame = () => {
 
   const [decryptedData, setDecryptedData] = useState("");
-
-  // Function to decrypt the URL data
   const decryptURL = async (encryptedBase64, ivBase64, password) => {
     const enc = new TextEncoder();
     const encodedPassword = enc.encode(password);
-
-    // Convert Base64 back to bytes
     const encryptedBytes = new Uint8Array(atob(encryptedBase64).split('').map(char => char.charCodeAt(0)));
     const ivBytes = new Uint8Array(atob(ivBase64).split('').map(char => char.charCodeAt(0)));
-
-    // Derive the key again from the password
     const key = await crypto.subtle.importKey(
       "raw",
       encodedPassword,
@@ -36,8 +30,6 @@ export const Frame = () => {
       false,
       ["decrypt"]
     );
-
-    // Decrypt the data
     const decrypted = await crypto.subtle.decrypt(
       {
         name: "AES-GCM",
@@ -49,19 +41,14 @@ export const Frame = () => {
 
     return new TextDecoder().decode(decrypted);
   };
-
-  // useEffect to extract query params and decrypt on component mount
   useEffect(() => {
     const decryptData = async () => {
-      const password = "my-password"; // Ensure this matches the encryption password
-
-      // Extract URL parameters (encrypted data and IV)
+      const password = "guna-techy@codingGame"; 
       const queryParams = new URLSearchParams(window.location.search);
       const encryptedBase64 = queryParams.get("url");
       const ivBase64 = queryParams.get("iv");
 
       if (encryptedBase64 && ivBase64) {
-        // Decrypt the data
         const decryptedURL = await decryptURL(encryptedBase64, ivBase64, password);
         setDecryptedData(decryptedURL);
       }
