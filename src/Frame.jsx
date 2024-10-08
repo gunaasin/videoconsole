@@ -58,7 +58,7 @@ export const Frame = () => {
     decryptData();
   }, []);
 
-  const fallbackGif = "https://mir-s3-cdn-cf.behance.net/project_modules/1400/533150197342221.662f3385e4f65.gif"; // URL to your fallback GIF
+  const fallbackGif = "https://player.vimeo.com/video/477617260?autoplay=true&loop=true&mute=false"; 
 
   return (
     <div className='framebox'>
@@ -76,15 +76,11 @@ export const Frame = () => {
               allowFullScreen
             ></iframe>
           ) : (
-         
                <iframe
-               src='https://videos.sproutvideo.com/embed/ea91d1b31c17ebc363/b5fe94b27f110ed9?autoplay=true&loop=true&mute=false'
+               src={fallbackGif}
                className="video-box"
                alt="Loading GIF"
-              
              ></iframe>
-        
-           
           )}
         </div>
       </div>
